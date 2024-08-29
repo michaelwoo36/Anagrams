@@ -9,9 +9,11 @@ public class LetterInventory {
 	//Post: Adds count of each letter to array
 	public LetterInventory(String word) {
 		for(int i = 0; i < word.length(); i++) {
+			if(word.charAt(i) != ' ') {
 			char letter = Character.toLowerCase(word.charAt(i));
 			letters[letter-97]++;
 			size++;
+			}
 		}
 	}
 	
